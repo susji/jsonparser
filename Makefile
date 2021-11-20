@@ -1,10 +1,10 @@
 #
 # NB: Expects Python 3.6 or later and Mypy.
 #
-PYTHON := python3
-MYPY := $(shell which mypy)
+PYTHON ?= python3
+MYPY ?= $(shell which mypy)
 TEST := -m unittest discover -v jsonparser
-COVERAGE := coverage3
+COVERAGE ?= coverage3
 
 test:
 	@echo Python: $(PYTHON)
